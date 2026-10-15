@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#103c37">
+<meta name="description" content="IMULIFE 3 天體驗裝登記：選擇配方、分享日常關注並填寫送貨資料。">
+<title>IMULIFE｜3 天體驗裝登記</title>
+<style>
+:root{--ink:#123b35;--text:#314841;--muted:#71817a;--green:#187657;--green-dark:#10563f;--mint:#dcefe5;--paper:#f6f7f2;--white:#fff;--line:#e0e7df;--error:#ae3434;--radius:22px;--shadow:0 18px 55px #163a2510}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--text);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Microsoft JhengHei","Noto Sans CJK TC",sans-serif}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}a{color:var(--green)}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #87bba9;outline-offset:4px}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:absolute;top:-80px;left:15px;z-index:100;background:white;padding:12px}.skip-link:focus{top:10px}
+.demo-bar{background:#e8efe7;color:#445d4e;text-align:center;font-size:12px;padding:9px 20px;border-bottom:1px solid #dbe4d9;letter-spacing:.02em}.demo-bar strong{margin-right:8px;color:var(--ink)}.demo-bar.error{background:#fff1ed;color:var(--error)}
+.site-header{height:96px;max-width:1260px;margin:auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between}.wordmark{font-weight:820;font-size:30px;color:var(--ink);letter-spacing:-1.4px;display:inline-flex;align-items:center;gap:10px}.brand-mark{width:25px;height:25px;border:6px solid var(--green);border-radius:50%;position:relative}.brand-mark:after{content:"";position:absolute;width:9px;height:9px;right:-9px;top:-7px;background:#a0cabb;border:3px solid var(--paper);border-radius:50%}.header-note{font-size:12px;color:var(--muted);letter-spacing:1px;display:flex;align-items:center;gap:10px}.header-note:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
+.layout{max-width:1260px;margin:8px auto 42px;padding:0 48px;display:grid;grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr);gap:58px;align-items:start}
+.hero{padding-top:32px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);letter-spacing:2.3px;font-size:11px;font-weight:700;margin-bottom:22px}.eyebrow span{width:22px;height:1px;background:var(--green)}h1{font-size:clamp(34px,3.4vw,46px);line-height:1.36;letter-spacing:-1.4px;margin:0 0 19px;color:var(--ink);font-weight:750}h1 em{font-style:normal;color:var(--green)}.hero-copy{margin:0;color:#687c72;font-size:15px;line-height:1.9;max-width:350px}
+.art{height:252px;position:relative;margin:31px 0 25px;overflow:hidden;background:radial-gradient(ellipse at 52% 74%,#dfece0 0,#edf3e9 37%,transparent 67%);border-radius:30px}.art-ring{position:absolute;left:39px;top:20px;width:274px;height:218px;border:1px solid #d2dfd1;border-radius:50%;transform:rotate(-20deg)}.art-ring.two{left:50px;top:5px;transform:rotate(23deg);width:290px}.leaf{position:absolute;width:81px;height:126px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#8da57d,#c8d6bc);transform:rotate(-28deg);right:12px;bottom:23px;opacity:.7}.leaf.two{width:59px;height:93px;right:56px;bottom:2px;transform:rotate(-55deg);background:#b4c6a1}.sachet{position:absolute;top:32px;width:123px;height:183px;background:#fffefb;border:1px solid #d9e1d5;box-shadow:6px 14px 22px #29493616;padding:21px 12px 13px;display:flex;flex-direction:column;transform:rotate(-10deg);left:71px}.sachet:before,.sachet:after{content:"";position:absolute;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,#e5eadd 0,#e5eadd 1px,#fbfcf7 1px,#fbfcf7 4px)}.sachet:before{top:0}.sachet:after{bottom:0}.sachet.bijoy{left:196px;top:44px;transform:rotate(9deg);background:#fcf5e8}.pack-brand{font-size:10px;letter-spacing:-.3px;font-weight:850;color:var(--ink)}.pack-name{font-size:29px;letter-spacing:-1.2px;font-weight:680;margin-top:20px;color:var(--ink);line-height:1.15}.bijoy .pack-name{color:#927345}.pack-sub{font-size:9px;margin:4px 0;color:#658074}.pack-band{height:30px;background:#bedccb;margin:13px -12px 5px;display:flex;align-items:center;justify-content:center;font-size:8px;letter-spacing:2px;color:#355d49}.bijoy .pack-band{background:#ebd6ac;color:#856335}.pack-bottom{font-size:8px;letter-spacing:1px;color:#7d8b80;margin-top:auto}.art-badge{position:absolute;right:25px;top:10px;z-index:2;background:#173e35;color:#f4f8ef;border-radius:50%;width:66px;height:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(9deg);box-shadow:0 5px 15px #21423814}.art-badge b{font-size:25px;line-height:1.2}.art-badge span{font-size:8px;letter-spacing:1.5px}.art-caption{position:absolute;bottom:1px;left:4px;font-size:10px;letter-spacing:.3px;color:#8b998d}
+.hero-points{display:flex;align-items:flex-start;border-top:1px solid var(--line);padding-top:20px;gap:18px}.hero-point{flex:1}.hero-point strong{display:block;font-size:13px;font-weight:650;color:var(--ink);margin:6px 0 1px}.hero-point span{font-size:11px;color:var(--muted)}.line-icon{width:21px;height:21px;stroke:var(--green);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.form-card{background:var(--white);border:1px solid #e4e9e1;border-radius:var(--radius);padding:29px 32px 25px;box-shadow:var(--shadow);min-width:0}.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.card-top span{font-size:11px;letter-spacing:2px;color:var(--muted);font-weight:650}.step-count{font-size:12px;color:var(--green);background:#f0f6ef;padding:3px 10px;border-radius:99px;letter-spacing:0!important}
+.progress{list-style:none;display:flex;padding:0;margin:0 0 28px;gap:0}.progress li{flex:1;position:relative}.progress li:not(:last-child):after{position:absolute;content:"";height:1px;background:var(--line);left:28px;right:0;top:14px}.progress li.done:after{background:#8db8a1}.progress button{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:0;border:0;background:transparent;position:relative;z-index:1;cursor:default}.progress .dot{display:flex;justify-content:center;align-items:center;width:28px;height:28px;border-radius:50%;background:#f0f3ed;color:#8c998b;font-size:11px;border:1px solid #e6ebe2}.progress .label{font-size:11px;color:#8e998d}.progress .current .dot{background:var(--green);color:#fff;border-color:var(--green);box-shadow:0 0 0 4px #f0f6ee}.progress .current .label{color:var(--ink);font-weight:650}.progress .done .dot{background:#e8f3ea;color:var(--green);border-color:#c7e1cc}.progress .done button{cursor:pointer}.progress li:last-child{flex:.72}
+.step-head{margin-bottom:23px}.step-head h2{font-size:24px;letter-spacing:-.6px;font-weight:700;color:var(--ink);margin:0 0 7px;line-height:1.45}.step-head p{font-size:12px;color:var(--muted);margin:0;line-height:1.8}
+.fieldset{border:0;padding:0;margin:0;min-width:0}.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.product-option{position:relative;cursor:pointer;display:flex;flex-direction:column;min-height:215px;padding:18px 16px 15px;border:1.5px solid var(--line);border-radius:15px;background:#fbfcf8;transition:border-color .18s,background .18s,transform .18s}.product-option:hover{transform:translateY(-2px);border-color:#99b6a3}.product-option:has(input:checked){border-color:var(--green);background:#f1f8f0}.product-option:has(input:focus-visible){outline:3px solid #87bba9;outline-offset:3px}.product-option.child{background:#fffcf6}.product-option.child:has(input:checked){background:#faf4e5}.radio-circle{position:absolute;top:15px;right:14px;width:19px;height:19px;border:1.5px solid #cad7c9;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff}.radio-circle:after{content:"";width:9px;height:9px;border-radius:50%;background:transparent}.product-option:has(input:checked) .radio-circle{border-color:var(--green)}.product-option:has(input:checked) .radio-circle:after{background:var(--green)}.product-tag{font-size:10px;color:var(--green);letter-spacing:1px;margin-bottom:20px}.child .product-tag{color:#927648}.product-glyph{width:39px;height:39px;fill:none;stroke:#5f8e76;stroke-width:1.2;margin-bottom:13px}.child .product-glyph{stroke:#a58957}.product-name{font-size:26px;letter-spacing:-.7px;font-weight:650;line-height:1.2;color:var(--ink)}.product-desc{font-size:12px;color:#5f7468;margin-top:4px}.product-foot{font-size:10px;color:#8a9788;margin-top:auto;padding-top:14px}.micro-note{font-size:11px;color:#7b8b7f;margin:15px 0 0;display:flex;gap:7px;align-items:flex-start}.micro-note svg{flex:0 0 14px;width:14px;height:14px;margin-top:3px;stroke:#7b8b7f}.note-box{background:#f4f7f1;border:1px solid #e7ede2;border-radius:11px;padding:13px 15px;font-size:11px;color:#65796d;line-height:1.85;margin-top:20px}
+.concern-list{display:grid;gap:9px}.concern-option{display:flex;align-items:center;gap:12px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;cursor:pointer;position:relative;transition:background .18s,border-color .18s}.concern-option:has(input:checked){background:#f1f7ef;border-color:var(--green)}.concern-option:has(input:focus-visible){outline:3px solid #87bba9;outline-offset:2px}.concern-index{width:25px;height:25px;border-radius:50%;background:#edf2e9;font-size:12px;color:var(--green);display:grid;place-items:center;flex-shrink:0}.concern-text{font-size:14px;font-weight:550;color:var(--ink)}.concern-check{margin-left:auto;color:var(--green);opacity:0}.concern-option:has(input:checked) .concern-check{opacity:1}.skip-concern{display:flex;align-items:center;gap:8px;margin:13px 0 0;font-size:12px;color:#718171;cursor:pointer}.skip-concern input{accent-color:var(--green)}
+.fields{display:grid;gap:17px}.field label{display:block;font-size:12px;font-weight:600;color:var(--ink);margin-bottom:6px}.field label small{font-size:11px;font-weight:400;color:var(--muted)}.input,.field select,.field textarea{width:100%;min-height:45px;border:1px solid #dbe3d6;border-radius:9px;background:#fff;color:var(--ink);padding:10px 12px;font-size:16px;transition:border-color .2s}.input::placeholder,.field textarea::placeholder{color:#a0ad9e;font-size:12px}.field textarea{resize:vertical;min-height:85px}.field [aria-invalid=true]{border-color:var(--error)}.phone-field{position:relative}.phone-prefix{position:absolute;top:12px;left:13px;color:#687b6b;font-size:13px;border-right:1px solid var(--line);padding-right:12px}.phone-field input{padding-left:76px}.error-text{font-size:11px;color:var(--error);margin:5px 0 0}.field-hint{font-size:10px;color:#859181;margin:5px 0 0}.consents{margin-top:20px;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px}.check-row{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:#67796a;line-height:1.9}.check-row input{flex:0 0 16px;width:16px;height:16px;accent-color:var(--green);margin:4px 0 0;cursor:pointer}.check-row label{cursor:pointer}.text-button{border:0;padding:0;background:transparent;color:var(--green);text-decoration:underline;text-underline-offset:3px;font-size:inherit}.marketing-box{background:#f6f8f2;border:1px solid #e9eee0;border-radius:10px;padding:13px}.optional-pill{display:inline-block;font-size:9px;color:var(--green);background:#e7efdf;line-height:1.5;padding:2px 6px;border-radius:4px;margin-left:4px}.marketing-detail{margin-top:5px;font-size:12px;color:#7b8976}.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+.review-product{background:#eff6eb;border:1px solid #dce9d7;padding:17px 18px;border-radius:13px;display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.review-product small{font-size:10px;color:var(--green);display:block}.review-product strong{font-size:22px;color:var(--ink);font-weight:650}.review-product span{font-size:12px;color:#65765e}.summary-list{margin:0}.summary-row{display:grid;grid-template-columns:76px 1fr auto;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid #edf0e9;font-size:12px}.summary-row dt{color:#899583}.summary-row dd{margin:0;word-break:break-word;color:var(--ink);white-space:pre-line}.edit-button{font-size:10px;color:var(--green);background:none;border:0;padding:3px}.privacy-summary{font-size:10px;color:#7a8875;margin:15px 0 0}.form-error{font-size:12px;background:#fff4ef;padding:11px 13px;border-radius:9px;color:var(--error);margin:15px 0 0}.actions{display:flex;gap:12px;margin-top:25px;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:11px;min-height:48px;padding:11px 20px;font-size:13px;font-weight:600;border:1px solid transparent;transition:background .15s,transform .15s;text-decoration:none}.btn-primary{background:var(--green);color:#fff;flex:1}.btn-primary:hover{background:var(--green-dark)}.btn-primary svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7}.btn-secondary{background:white;color:#5f7363;border-color:#dfe7d9;flex:0 0 auto}.btn-secondary:hover{background:#f5f7f1}.card-bottom{font-size:10px;color:#97a18f;text-align:center;margin-top:15px;display:flex;align-items:center;justify-content:center;gap:5px}.card-bottom svg{width:12px;height:12px;stroke:#899a86;fill:none;stroke-width:1.6}
+.success{padding:14px 0 0;text-align:center}.success-icon{width:64px;height:64px;background:#edf6e8;border:1px solid #dcebd4;border-radius:50%;margin:0 auto 19px;display:grid;place-items:center}.success-icon svg{stroke:var(--green);width:28px;height:28px;fill:none;stroke-width:1.7}.success h2{font-size:26px;color:var(--ink);margin:0 0 12px}.success .lead{font-size:12px;color:#778572;line-height:1.9;margin:0 auto;max-width:340px}.receipt{background:#f6f8f2;border:1px solid #e3e9dc;border-radius:14px;margin:24px 0;padding:20px}.receipt small{font-size:10px;color:#839077;letter-spacing:1px;display:block}.receipt strong{display:block;margin:6px 0;font-size:19px;letter-spacing:1px;color:var(--ink);overflow-wrap:anywhere}.receipt p{font-size:11px;color:#78866d;margin:0}.timeline{text-align:left;display:grid;gap:19px;margin:20px 0}.timeline-row{display:flex;gap:12px;align-items:flex-start}.timeline-dot{height:22px;width:22px;border-radius:50%;border:1px solid #b9cfaf;color:var(--green);background:#f5f9f0;font-size:10px;display:grid;place-items:center;flex-shrink:0}.timeline-row strong{font-size:12px;font-weight:650;color:var(--ink);display:block}.timeline-row p{font-size:11px;color:#8a9580;margin:2px 0}.success .btn{width:100%;margin-top:10px}.success-contact{font-size:11px;color:#7b8771;line-height:1.9;margin:15px 0 0}
+.site-footer{max-width:1164px;margin:0 auto;padding:20px 0 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#8f9a89;font-size:10px}.footer-links{display:flex;gap:18px}.footer-links button{color:#7e8d76;text-decoration:none}.site-footer p{margin:0}.footer-sub{display:block;margin-top:3px;font-size:9px;color:#a1a998}
+dialog{border:1px solid var(--line);border-radius:20px;max-width:620px;width:calc(100% - 32px);max-height:85vh;padding:0;background:var(--white);color:var(--text);box-shadow:0 20px 100px #14362030}dialog::backdrop{background:#102b2775;backdrop-filter:blur(4px)}.dialog-header{padding:20px 25px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:white;z-index:1}.dialog-header h2{font-size:18px;margin:0;color:var(--ink)}.close-button{width:32px;height:32px;border:1px solid #dfe8d8;border-radius:50%;background:#f6f9f2;color:var(--ink);font-size:20px;line-height:1}.dialog-content{padding:20px 25px 25px;font-size:12px;line-height:1.95}.dialog-content h3{font-size:13px;color:var(--ink);margin:18px 0 5px}.dialog-content p{margin:0 0 12px}.dialog-content .draft-note{background:#fff5e9;color:#937337;padding:10px 13px;border-radius:7px}.dialog-content .version{font-size:10px;color:var(--muted)}
+@media (min-width:1350px){.layout{gap:74px}.hero{padding-top:43px}.hero h1{font-size:48px}.art{height:260px;margin-top:36px}.sachet{left:82px}.sachet.bijoy{left:211px}.art-ring{left:54px}}
+@media (max-width:1020px){.site-header{padding:0 30px}.layout{padding:0 30px;gap:30px;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}h1{font-size:35px}.hero-copy{font-size:13px}.form-card{padding:25px}.sachet{left:20px}.sachet.bijoy{left:135px}.art-badge{right:7px}.art-ring{left:0}.hero-points{gap:9px}.hero-point strong{font-size:12px}.site-footer{margin:0 30px}.leaf{right:0}}
+@media (max-width:760px){.demo-bar{font-size:10px;padding:8px 15px}.site-header{height:76px;padding:0 23px}.wordmark{font-size:27px}.brand-mark{width:22px;height:22px;border-width:5px}.header-note{font-size:10px;letter-spacing:.5px}.layout{display:block;padding:0 20px;margin:0 auto 30px;max-width:560px}.hero{padding:18px 4px 0}.eyebrow{font-size:9px;margin-bottom:11px;letter-spacing:1.8px}h1{font-size:34px;letter-spacing:-1px;line-height:1.35;margin-bottom:13px}.hero-copy{font-size:12px;line-height:1.9;max-width:100%;margin-bottom:20px}.hero-copy br{display:none}.art{display:none}.hero-points{display:none}.form-card{padding:24px 22px;border-radius:19px;box-shadow:0 10px 35px #1b3b2510}.card-top{margin-bottom:19px}.progress{margin-bottom:24px}.step-head h2{font-size:23px}.step-head p{font-size:11px}.step-head{margin-bottom:18px}.product-option{min-height:205px;padding:17px 14px 14px}.product-name{font-size:25px}.product-tag{margin-bottom:20px}.note-box{font-size:10px;margin-top:17px}.micro-note{font-size:10px}.site-footer{margin:0 23px;display:block;padding:20px 0 25px;font-size:9px}.footer-links{margin-top:14px;gap:20px;font-size:10px}.hero.compact{display:none}.layout:has(.hero.compact){margin-top:10px}.card-bottom{font-size:9px}.btn{min-height:49px}.field-hint{font-size:10px}.consents{gap:13px}.check-row{font-size:12px}.summary-row{grid-template-columns:67px 1fr auto;gap:7px}.receipt strong{font-size:17px}.dialog-content{padding:16px 20px 22px}.dialog-header{padding:17px 20px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.demo-bar,.site-header,.hero,.site-footer,.actions,.success .btn,.progress,.card-top{display:none!important}.layout{display:block;padding:0;margin:0}.form-card{box-shadow:none;border:0}.success{display:block}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#form-title">跳至登記表格</a>
+<div class="demo-bar" id="mode-banner" role="status"><strong>互動示範</strong>不會提交或儲存資料，請勿輸入真實個人資料。</div>
+<header class="site-header">
+  <div class="wordmark" aria-label="IMULIFE"><span class="brand-mark" aria-hidden="true"></span>IMULIFE</div>
+  <div class="header-note">3 天體驗計劃</div>
+</header>
+<main class="layout">
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="eyebrow"><span></span> A SMALL START. A DAILY ROUTINE.</div>
+    <h1 id="hero-title">你的 <em>3 天體驗，</em><br>由這裡開始。</h1>
+    <p class="hero-copy">選擇適合你或孩子的配方，完成簡單登記。<br>把一份日常關懷，送到你手上。</p>
+    <div class="art" aria-label="BiCore 成人配方及 BiJoy 兒童配方的設計示意，非實際包裝">
+      <div class="art-ring"></div><div class="art-ring two"></div><div class="leaf"></div><div class="leaf two"></div>
+      <div class="sachet"><span class="pack-brand">IMULIFE</span><span class="pack-name">BiCore</span><span class="pack-sub">成人配方</span><span class="pack-band">DAILY ROUTINE</span><span class="pack-bottom">TRIAL EXPERIENCE</span></div>
+      <div class="sachet bijoy"><span class="pack-brand">IMULIFE</span><span class="pack-name">BiJoy</span><span class="pack-sub">兒童配方</span><span class="pack-band">LITTLE MOMENTS</span><span class="pack-bottom">TRIAL EXPERIENCE</span></div>
+      <div class="art-badge"><b>3</b><span>DAY TRIAL</span></div>
+      <span class="art-caption">配方視覺示意 · 非實際產品包裝</span>
+    </div>
+    <div class="hero-points">
+      <div class="hero-point"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 7 3v6c0 5-7 9-7 9s-7-4-7-9V6l7-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><strong>自主選擇</strong><span>成人及兒童配方</span></div>
+      <div class="hero-point"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h12v11H3zM15 10h4l3 4v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg><strong>送到你手上</strong><span>香港地區配送</span></div>
+      <div class="hero-point"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg><strong>尊重你的選擇</strong><span>宣傳資訊自願訂閱</span></div>
+    </div>
+  </section>
+  <section class="form-card" id="application-card" aria-label="體驗裝申請">
+    <div class="card-top" id="card-top"><span>YOUR TRIAL STARTS HERE</span><span class="step-count" id="step-count">01 / 04</span></div>
+    <ol class="progress" id="progress" aria-label="登記進度">
+      <li class="current" aria-current="step"><button type="button" data-step="1" aria-label="步驟1 選擇配方"><span class="dot">1</span><span class="label">選擇配方</span></button></li>
+      <li><button type="button" data-step="2" disabled aria-label="步驟2 日常關注"><span class="dot">2</span><span class="label">日常關注</span></button></li>
+      <li><button type="button" data-step="3" disabled aria-label="步驟3 送貨資料"><span class="dot">3</span><span class="label">送貨資料</span></button></li>
+      <li><button type="button" data-step="4" disabled aria-label="步驟4 確認申請"><span class="dot">4</span><span class="label">確認申請</span></button></li>
+    </ol>
+    <form id="trial-form" novalidate>
+      <section class="step-panel" data-panel="1">
+        <div class="step-head"><h2 id="form-title" tabindex="-1">這份體驗，是給誰的？</h2><p>請選擇一款配方，開始你的 3 天體驗。</p></div>
+        <fieldset class="fieldset"><legend class="sr-only">選擇一款產品（必填）</legend>
+          <div class="product-grid">
+            <label class="product-option">
+              <input class="sr-only" type="radio" name="product" value="bicore"><span class="radio-circle" aria-hidden="true"></span>
+              <span class="product-tag">FOR ADULTS</span>
+              <svg class="product-glyph" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="12" r="6"/><path d="M8 34c0-9 4-14 12-14s12 5 12 14M14 32v-5M26 32v-5"/></svg>
+              <span class="product-name">BiCore</span><span class="product-desc">成人配方</span><span class="product-foot">IMULIFE 3 天體驗裝</span>
+            </label>
+            <label class="product-option child">
+              <input class="sr-only" type="radio" name="product" value="bijoy"><span class="radio-circle" aria-hidden="true"></span>
+              <span class="product-tag">FOR CHILDREN</span>
+              <svg class="product-glyph" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="13" r="7"/><path d="M10 34c0-9 4-13 10-13s10 4 10 13M14 9c3 3 7 3 10 0M17 15h.1M23 15h.1M18 18h4"/></svg>
+              <span class="product-name">BiJoy</span><span class="product-desc">兒童配方</span><span class="product-foot">由家長或監護人代為申請</span>
+            </label>
+          </div>
+        </fieldset>
+        <p class="error-text" id="product-error" hidden>請先選擇一款配方。</p>
+        <p class="micro-note"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 7v.2"/></svg>每次申請一款。產品適用年齡及食用方法請以正式包裝為準。</p>
+        <div class="note-box">登記確認後，預計於 <strong>3 個工作天內寄出</strong>。<br>實際安排以確認為準；寄出時間並不等於送達時間。</div>
+      </section>
+      <section class="step-panel" data-panel="2" hidden>
+        <div class="step-head"><h2 tabindex="-1">你最關注哪一方面？</h2><p>只選一項，讓我們了解你的日常關注。此題可略過。</p></div>
+        <fieldset class="fieldset"><legend class="sr-only">日常關注（選填）</legend>
+          <div class="concern-list">
+            <label class="concern-option"><input class="sr-only" type="radio" name="concern" value="1"><span class="concern-index">1</span><span class="concern-text">消化不良</span><span class="concern-check" aria-hidden="true">✓</span></label>
+            <label class="concern-option"><input class="sr-only" type="radio" name="concern" value="2"><span class="concern-index">2</span><span class="concern-text">排便唔順</span><span class="concern-check" aria-hidden="true">✓</span></label>
+            <label class="concern-option"><input class="sr-only" type="radio" name="concern" value="3"><span class="concern-index">3</span><span class="concern-text">容易疲倦</span><span class="concern-check" aria-hidden="true">✓</span></label>
+            <label class="concern-option"><input class="sr-only" type="radio" name="concern" value="4"><span class="concern-index">4</span><span class="concern-text">轉季易病／肌膚敏弱</span><span class="concern-check" aria-hidden="true">✓</span></label>
+            <label class="concern-option"><input class="sr-only" type="radio" name="concern" value="5"><span class="concern-index">5</span><span class="concern-text">其他</span><span class="concern-check" aria-hidden="true">✓</span></label>
+          </div>
+          <label class="skip-concern"><input type="radio" name="concern" value="" checked>暫不提供，不影響體驗裝申請</label>
+        </fieldset>
+        <div class="note-box">這不是健康評估或醫療建議。我們不需要你提供病歷、診斷或兒童的個人身份資料。</div>
+      </section>
+      <section class="step-panel" data-panel="3" hidden>
+        <div class="step-head"><h2 tabindex="-1">把體驗裝寄到你手上。</h2><p>以下送貨欄位均為必填。暫只接受香港地區地址。</p></div>
+        <div class="fields">
+          <div class="field"><label for="recipient">收件人姓名 <small>（申請人本人）</small></label><input class="input" id="recipient" name="recipient" autocomplete="shipping name" maxlength="60" placeholder="請輸入收件人姓名" aria-describedby="recipient-error"><p class="error-text" id="recipient-error" hidden></p></div>
+          <div class="field"><label for="phone">聯絡電話 <small>（可接收 WhatsApp）</small></label><div class="phone-field"><span class="phone-prefix">+852</span><input class="input" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="shipping tel-national" maxlength="18" placeholder="8 位香港電話號碼" aria-describedby="phone-error phone-hint"></div><p class="field-hint" id="phone-hint">用於處理本次申請及配送聯絡；不會自動訂閱宣傳。</p><p class="error-text" id="phone-error" hidden></p></div>
+          <div class="field"><label for="region">送貨地區</label><select id="region" name="region" autocomplete="shipping address-level1" aria-describedby="region-error"><option value="">請選擇地區</option value="香港島">香港島</option><option value="九龍">九龍</option><option value="新界及離島">新界及離島</option></select><p class="error-text" id="region-error" hidden></p></div>
+          <div class="field"><label for="address">詳細地址</label><textarea id="address" name="address" autocomplete="shipping street-address" maxlength="240" placeholder="地區、街道、屋苑／大廈、座數、樓層及室號" aria-describedby="address-error"></textarea><p class="error-text" id="address-error" hidden></p></div>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="website">請勿填寫此欄<input id="website" name="website" autocomplete="off" tabindex="-1"></label></div>
+        <div class="consents">
+          <div class="check-row"><input id="adult" type="checkbox"><label for="adult">本人已年滿 18 歲；如申請 BiJoy 兒童配方，本人為相關兒童的家長或監護人。</label></div><p class="error-text" id="adult-error" hidden></p>
+          <div class="check-row"><input id="privacy" type="checkbox"><label for="privacy">我已閱讀<button class="text-button" type="button" data-dialog="privacy-dialog">《收集個人資料聲明》</button>及<button class="text-button" type="button" data-dialog="terms-dialog">《活動條款》</button>，並明白本次申請的資料用途。</label></div><p class="error-text" id="privacy-error" hidden></p>
+          <div class="marketing-box">
+            <div class="check-row"><input id="marketing" type="checkbox"><label for="marketing">我同意接收 IMULIFE 推廣資訊<span class="optional-pill">自願選填</span><div class="marketing-detail" id="marketing-text"></div></label></div>
+          </div>
+        </div>
+      </section>
+      <section class="step-panel" data-panel="4" hidden>
+        <div class="step-head"><h2 tabindex="-1">最後，確認一下資料。</h2><p>確認送貨資料無誤後，按下方按鈕提交申請。</p></div>
+        <div class="review-product"><div><small>你的 3 天體驗裝</small><strong id="review-product"></strong></div><span id="review-type"></span></div>
+        <dl class="summary-list">
+          <div class="summary-row"><dt>日常關注</dt><dd id="review-concern"></dd><button type="button" class="edit-button" data-edit="2">修改</button></div>
+          <div class="summary-row"><dt>收件人</dt><dd id="review-recipient"></dd><button type="button" class="edit-button" data-edit="3">修改</button></div>
+          <div class="summary-row"><dt>聯絡電話</dt><dd id="review-phone"></dd><button type="button" class="edit-button" data-edit="3">修改</button></div>
+          <div class="summary-row"><dt>送貨地址</dt><dd id="review-address"></dd><button type="button" class="edit-button" data-edit="3">修改</button></div>
+          <div class="summary-row"><dt>推廣資訊</dt><dd id="review-marketing"></dd><button type="button" class="edit-button" data-edit="3">修改</button></div>
+        </dl>
+        <div class="note-box"><strong>接下來會怎樣？</strong><br>收到申請 → 核對資料及名額 → 安排寄出。<br>資料確認後預計 3 個工作天內寄出，並非保證 3 天內送達。</div>
+        <p class="privacy-summary">日常關注不會用作個人化宣傳。未同意推廣資訊，不影響本次申請。</p>
+      </section>
+      <p class="form-error" id="form-error" role="alert" hidden></p>
+      <div class="actions" id="form-actions"><button class="btn btn-secondary" id="back-button" type="button" hidden>上一步</button><button class="btn btn-primary" id="next-button" type="submit"><span id="next-text">下一步</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5"/></svg></button></div>
+      <div class="card-bottom" id="card-bottom"><svg viewBox="0 0 18 18" aria-hidden="true"><rect x="4" y="8" width="10" height="8" rx="2"/><path d="M6 8V5a3 3 0 0 1 6 0v3"/></svg>只收集本次申請需要的資料 · 宣傳同意另行選擇</div>
+    </form>
+    <section class="success" id="success" hidden aria-labelledby="success-title">
+      <div class="success-icon"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="m6 14 5 5L22 8"/></svg></div>
+      <h2 id="success-title" tabindex="-1">我們收到你的申請了。</h2>
+      <p class="lead" id="success-lead"></p>
+      <div class="receipt"><small>APPLICATION REFERENCE</small><strong id="reference"></strong><p id="receipt-product"></p></div>
+      <div class="timeline">
+        <div class="timeline-row"><span class="timeline-dot">1</span><div><strong id="timeline-first">申請已收到</strong><p id="receipt-time"></p></div></div>
+        <div class="timeline-row"><span class="timeline-dot">2</span><div><strong>核對資料及名額</strong><p>如有需要，團隊會就本次申請與你聯絡。</p></div></div>
+        <div class="timeline-row"><span class="timeline-dot">3</span><div><strong>確認後預計 3 個工作天內寄出</strong><p>此為預計寄出時間，實際送達視乎物流安排。</p></div></div>
+      </div>
+      <div class="note-box" id="demo-success" hidden>這只是互動示範：沒有發送申請、保留名額、寄出體驗裝或傳送 WhatsApp 訊息。</div>
+      <button type="button" class="btn btn-secondary" id="copy-reference">複製申請編號</button>
+      <a class="btn btn-primary" id="channel-link" hidden target="_blank" rel="noopener noreferrer">自願追蹤 IMULIFE WhatsApp Channel</a>
+      <button type="button" class="btn btn-secondary" id="restart" hidden>重新體驗流程</button>
+      <p class="success-contact" id="success-contact"></p>
+    </section>
+    <p class="sr-only" id="announcer" aria-live="polite"></p>
+  </section>
+</main>
+<footer class="site-footer"><div><p>IMULIFE · Small steps, everyday.</p><span class="footer-sub">本表格不是健康評估；產品資訊及食用方法請以正式標籤為準。</span></div><div class="footer-links"><button type="button" class="text-button" data-dialog="privacy-dialog">收集個人資料聲明</button><button type="button" class="text-button" data-dialog="terms-dialog">活動條款</button></div></footer>
+
+<dialog id="privacy-dialog" aria-labelledby="privacy-title"><div class="dialog-header"><h2 id="privacy-title">收集個人資料聲明</h2><button type="button" class="close-button" aria-label="關閉" data-close>×</button></div><div class="dialog-content">
+<p class="draft-note" id="privacy-draft">示範聲明。公司法定名稱、聯絡方式及實際資料安排須在正式收集資料前填妥並覆核。</p>
+<div id="privacy-body"></div>
+<p class="version" id="privacy-version"></p>
+</div></dialog>
+<dialog id="terms-dialog" aria-labelledby="terms-title"><div class="dialog-header"><h2 id="terms-title">活動條款</h2><button type="button" class="close-button" aria-label="關閉" data-close>×</button></div><div class="dialog-content">
+<p class="draft-note" id="terms-draft">以下為樣板活動設定，需由營運方確認後才可公開使用。</p>
+<h3>參加及申請</h3><p>申請人須年滿 18 歲。申請兒童配方者，須為相關兒童的家長或監護人。每個香港電話號碼在本活動限提交一份申請，每份申請可選一款 3 天體驗裝。只接受香港地區地址。</p>
+<h3>確認及配送</h3><p>成功提交只代表收到申請，不等於名額已確認或已寄出。體驗裝供應須經團隊確認；資料及名額確認後，預計 3 個工作天內寄出。星期六、星期日及香港公眾假期不計作工作天；寄出時間並非送達時間。網站不會自動預約快遞或發送確認訊息。</p>
+<h3>資料及個人選擇</h3><p>請提供準確的收件及聯絡資料。日常關注問題屬選填，不影響領取資格。接收日後宣傳亦屬自願、不預先勾選，不影響申請。本活動不要求提供病歷、身份證或兒童姓名及出生日期。</p>
+<h3>產品使用</h3><p>本流程不提供診斷、治療或療效保證。產品適用年齡、食用方法、成分及注意事項，請參考正式產品標籤。頁面上的配方圖案為設計示意，並非實際包裝。</p>
+<p class="version" id="terms-version"></p>
+</div></dialog>
+<script>
+"use strict";
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => [...document.querySelectorAll(s)];
+  const isFile = location.protocol === "file:";
+  const productNames = { bicore: "BiCore", bijoy: "BiJoy" };
+  const productTypes = { bicore: "成人配方", bijoy: "兒童配方" };
+  const concerns = {"1":"消化不良","2":"排便唔順","3":"容易疲倦","4":"轉季易病／肌膚敏弱","5":"其他","":"暫不提供"};
+  let config = {
+    mode:"demo", company:"【待填：營運公司法定名稱】",
+    privacy_email:"【待填：私隱聯絡電郵】", retention_days:90,
+    notice_version:"PICS-2026-10-15-v1", terms_version:"TERMS-2026-10-15-v1",
+    marketing_version:"DM-2026-10-15-v1", channel_url:"", csrf_token:""
+  };
+  let step = 1, furthest = 1, busy = false, ready = isFile;
+  const key = () => {
+    const bytes = new Uint8Array(16);
+    crypto.getRandomValues(bytes);
+    return Array.from(bytes, b => b.toString(16).padStart(2, "0")).join("");
+  };
+  let submissionKey = key();
+  const fieldNames = ["recipient", "phone", "region", "address", "adult", "privacy"];
+  const cleanPhone = (s) => {
+    let v = s.replace(/[\s()-]/g, "");
+    if (v.startsWith("+852")) v = v.slice(4);
+    else if (v.length === 11 && v.startsWith("852")) v = v.slice(3);
+    return v;
+  };
+  const data = () => ({
+    product: $('input[name="product"]:checked')?.value || "",
+    concern: $('input[name="concern"]:checked')?.value || "",
+    recipient: $("#recipient").value.trim(), phone: cleanPhone($("#phone").value),
+    region: $("#region").value, address: $("#address").value.trim(),
+    adult_confirmed: $("#adult").checked, privacy_acknowledged: $("#privacy").checked,
+    marketing_consent: $("#marketing").checked,
+    notice_version: config.notice_version, terms_version: config.terms_version,
+    marketing_version: config.marketing_version,
+    website: $("#website").value, idempotency_key: submissionKey
+  });
+  const noticeSections = () => config.privacy_sections || [
+    ["誰收集資料", `${config.company}（以 IMULIFE 品牌營運，下稱「我們」）負責本次登記資料。查閱、更正、刪除資料或撤回宣傳同意，可聯絡：${config.privacy_email}。`],
+    ["收集甚麼及為甚麼", "姓名、香港電話號碼、送貨地區及詳細地址用於處理申請、核對重複登記、配送及本次申請的客服聯絡；這些是處理及配送所需的必填資料，未提供便無法完成申請。選擇的產品用於安排相應體驗裝。日常關注屬選填，只用於了解本次申請的需求及回應相關查詢，不用於個人化宣傳。"],
+    ["誰可能接收資料", "獲授權員工，以及就本活動提供配送、網站託管或資訊系統服務且受保密及資料處理要求約束的服務供應商。配送服務只應獲取必要的收件及聯絡資料。我們不把資料提供予第三者作其自行直接促銷用途。"],
+    ["宣傳同意另行選擇", `只有當你另行勾選同意，我們才使用你的姓名及電話號碼，經 WhatsApp 推廣 IMULIFE 益生菌及健康補充品、相關優惠與品牌活動。地址和日常關注不作直接促銷用途。你可隨時聯絡 ${config.privacy_email} 免費撤回。拒絕或撤回不影響本次申請。`],
+    ["資料保留及選擇", `本活動申請記錄及本表格收集的宣傳意向，以登記後 ${config.retention_days} 天為預設保留期，之後刪除。營運方須按相同安排處理匯出副本及備份；不應把資料另作未告知的長期保留用途。可透過上述聯絡方式提出查閱、更正或刪除要求，相關要求會按適用規定處理。`],
+    ["網站技術資料", "本頁不使用廣告追蹤器或第三方分析工具。正式服務使用必要的暫時性 cookie 以維持表單安全，並以不可直接還原的代碼作基本提交限流。伺服器及託管供應商的保安紀錄，亦須按其實際設定及必要期限管理。"]
+  ];
+  const renderConfig = () => {
+    const demo = config.mode !== "live";
+    $("#mode-banner").hidden = !demo;
+    $("#privacy-draft").hidden = !demo;
+    $("#terms-draft").hidden = !demo;
+    $("#marketing-text").textContent = config.marketing_text || `同意 ${config.company} 使用我的姓名及電話號碼，經 WhatsApp 推廣 IMULIFE 益生菌及健康補充品、相關優惠與品牌活動。可聯絡 ${config.privacy_email} 免費取消；不勾選不影響本次申請。`;
+    const body = $("#privacy-body"); body.replaceChildren();
+    noticeSections().forEach(([title, text]) => {
+      const h = document.createElement("h3"); h.textContent = title;
+      const p = document.createElement("p"); p.textContent = text;
+      body.append(h,p);
+    });
+    $("#privacy-version").textContent = `聲明版本：${config.notice_version}；宣傳同意版本：${config.marketing_version}`;
+    $("#terms-version").textContent = `活動條款版本：${config.terms_version}`;
+  };
+  renderConfig();
+  const say = (s) => { $("#announcer").textContent = s; };
+  const showError = (s) => { $("#form-error").textContent = s; $("#form-error").hidden = !s; };
+  const fieldError = (id, message) => {
+    const node = $("#" + id), err = $("#" + id + "-error");
+    node.setAttribute("aria-invalid", message ? "true" : "false");
+    err.textContent = message; err.hidden = !message;
+  };
+  const valid = (which) => {
+    showError("");
+    const d = data();
+    if (which === 1) {
+      $("#product-error").hidden = !!d.product;
+      if (!d.product) { say("請先選擇一款配方"); $('input[name="product"]').focus(); }
+      return !!d.product;
+    }
+    if (which !== 3) return true;
+    fieldNames.forEach(id => fieldError(id, ""));
+    const errors = {};
+    if (!d.recipient || d.recipient.length > 60 || /[\u0000-\u001f\u007f]/.test(d.recipient)) errors.recipient = "請填寫有效的收件人姓名（最多 60 字）。";
+    if (!/^[2-9]\d{7}$/.test(d.phone)) errors.phone = "請輸入 8 位香港電話號碼。";
+    if (!["香港島","九龍","新界及離島"].includes(d.region)) errors.region = "請選擇送貨地區。";
+    if (d.address.length < 8 || d.address.length > 240 || /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/.test(d.address)) errors.address = "請填寫完整地址（8 至 240 字）。";
+    if (!d.adult_confirmed) errors.adult = "請確認你已成年，以及適用的家長／監護人身份。";
+    if (!d.privacy_acknowledged) errors.privacy = "請先閱讀並確認個人資料聲明及活動條款。";
+    Object.entries(errors).forEach(([id,msg]) => fieldError(id,msg));
+    const first = Object.keys(errors)[0];
+    if (first) { $("#" + first).focus(); say("請檢查尚未填妥的資料。"); return false; }
+    return true;
+  };
+  const review = () => {
+    const d = data();
+    $("#review-product").textContent = productNames[d.product] || "";
+    $("#review-type").textContent = productTypes[d.product] || "";
+    $("#review-concern").textContent = concerns[d.concern];
+    $("#review-recipient").textContent = d.recipient;
+    $("#review-phone").textContent = "+852 " + d.phone;
+    $("#review-address").textContent = d.region + "\n" + d.address;
+    $("#review-marketing").textContent = d.marketing_consent ? "已自願同意 WhatsApp 推廣資訊" : "未同意宣傳，只處理本次申請";
+  };
+  const setStep = (n, focus = true) => {
+    if (busy) return;
+    step = n; furthest = Math.max(furthest,n);
+    $$(".step-panel").forEach(p => p.hidden = Number(p.dataset.panel) !== n);
+    $$("#progress li").forEach((li,i) => {
+      li.classList.toggle("current", i+1 === n);
+      li.classList.toggle("done", i+1 < n);
+      if (i+1 === n) li.setAttribute("aria-current","step"); else li.removeAttribute("aria-current");
+      li.querySelector("button").disabled = i+1 > n;
+      li.querySelector(".dot").textContent = i+1 < n ? "✓" : String(i+1);
+    });
+    $("#step-count").textContent = "0" + n + " / 04";
+    $("#back-button").hidden = n === 1;
+    $("#next-text").textContent = n === 4 ? (config.mode === "live" ? "確認並提交申請" : "完成示範申請") : "下一步";
+    $("#hero").classList.toggle("compact", n > 1);
+    showError("");
+    if (n === 4) review();
+    if (focus) {
+      const h = $(`[data-panel="${n}"] h2`);
+      h.focus({preventScroll:true});
+      if (matchMedia("(max-width:760px)").matches) $("#application-card").scrollIntoView({block:"start"});
+      say(`步驟 ${n} / 4：${h.textContent}`);
+    }
+  };
+  const finish = (receipt) => {
+    busy = false;
+    const d = data(), demo = config.mode !== "live";
+    $("#trial-form").hidden = true; $("#progress").hidden = true; $("#card-top").hidden = true;
+    $("#success").hidden = false; $("#hero").classList.add("compact");
+    $("#success-title").textContent = demo ? "示範流程已完成。" : "我們收到你的申請了。";
+    $("#success-lead").textContent = demo ? "這是完成登記後的頁面示範。沒有任何資料傳送到伺服器，也未有建立真實申請。" : "謝謝你的登記。請保留以下編號，方便查詢。本次申請仍待核對，並未代表已寄出。";
+    $("#reference").textContent = receipt.reference;
+    $("#receipt-product").textContent = `${productNames[d.product]} · ${productTypes[d.product]} · 3 天體驗裝`;
+    $("#receipt-time").textContent = new Intl.DateTimeFormat("zh-HK", {dateStyle:"medium",timeStyle:"short",timeZone:"Asia/Hong_Kong"}).format(new Date(receipt.created_at)) + "（香港時間）";
+    $("#timeline-first").textContent = demo ? "示範填寫完成" : "申請已收到";
+    $("#demo-success").hidden = !demo; $("#restart").hidden = !demo;
+    $("#success-contact").textContent = demo ? "正式上線後，此處會顯示已確認的客服聯絡方式。" : `更正資料或查詢申請：${config.privacy_email}`;
+    if (config.channel_url && !demo) {
+      $("#channel-link").href = config.channel_url; $("#channel-link").hidden = false;
+    }
+    $("#success-title").focus({preventScroll:true});
+    $("#application-card").scrollIntoView({block:"start"});
+    say(demo ? "示範完成，沒有提交真實資料。" : "申請已收到。");
+  };
+  $("#trial-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (busy || !ready) return;
+    if (!valid(step)) return;
+    if (step < 4) { setStep(step+1); return; }
+    if (!valid(1)) { setStep(1); return; }
+    if (!valid(3)) { setStep(3); return; }
+    const d = data();
+    if (config.mode !== "live") {
+      finish({ reference: "DEMO-" + submissionKey.slice(0,8).toUpperCase(), created_at:new Date().toISOString() }); return;
+    }
+    busy = true; $("#next-button").disabled = true; $("#back-button").disabled = true;
+    $("#next-text").textContent = "正在提交…"; showError("");
+    $$("#progress button, .edit-button").forEach(b => b.disabled = true);
+    const controller = new AbortController(), timer = setTimeout(() => controller.abort(), 15000);
+    try {
+      const response = await fetch("/api/applications", {
+        method:"POST", credentials:"same-origin", signal:controller.signal,
+        headers:{"Content-Type":"application/json","X-CSRF-Token":config.csrf_token},
+        body:JSON.stringify(d)
+      });
+      let result;
+      try { result = await response.json(); } catch { throw new Error("伺服器回應不完整。請保留此頁，稍後重試。"); }
+      if (!response.ok) throw new Error(result.error || "未能完成登記，請稍後重試。");
+      if (!result.reference || !result.created_at) throw new Error("未能確認申請結果，請保留此頁並聯絡客服。");
+      finish(result);
+    } catch (error) {
+      showError(error.name === "AbortError" ? "連線逾時。請不要關閉此頁，稍後再次提交；同一頁重試不會建立重複記錄。" : error.message);
+    } finally {
+      clearTimeout(timer); busy = false;
+      $("#next-button").disabled = false; $("#back-button").disabled = false;
+      $("#next-text").textContent = "確認並提交申請";
+      $$("#progress button").forEach((b,i) => b.disabled = i+1 > step);
+      $$(".edit-button").forEach(b => b.disabled = false);
+    }
+  });
+  $("#back-button").addEventListener("click", () => setStep(step-1));
+  $$("[data-edit]").forEach(b => b.addEventListener("click", () => setStep(Number(b.dataset.edit))));
+  $$("[data-step]").forEach(b => b.addEventListener("click", () => { if (Number(b.dataset.step) <= step) setStep(Number(b.dataset.step)); }));
+  $$('input[name="product"]').forEach(i => i.addEventListener("change", () => {$("#product-error").hidden = true;}));
+  fieldNames.forEach(id => $("#" + id).addEventListener("input", () => fieldError(id,"")));
+  $$("[data-dialog]").forEach(b => b.addEventListener("click", () => $("#" + b.dataset.dialog).showModal()));
+  $$("[data-close]").forEach(b => b.addEventListener("click", () => b.closest("dialog").close()));
+  $$("dialog").forEach(dialog => dialog.addEventListener("click", event => { if (event.target === dialog) {const r=dialog.getBoundingClientRect(); if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom) dialog.close();} }));
+  $("#copy-reference").addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText($("#reference").textContent); $("#copy-reference").textContent = "已複製申請編號"; }
+    catch { $("#copy-reference").textContent = "請選取上方申請編號並複製"; }
+  });
+  $("#restart").addEventListener("click", () => {
+    $("#trial-form").reset(); submissionKey = key(); furthest = 1;
+    $("#success").hidden = true; $("#trial-form").hidden = false; $("#progress").hidden = false; $("#card-top").hidden = false;
+    $("#copy-reference").textContent = "複製申請編號";
+    fieldNames.forEach(id => fieldError(id, ""));
+    setStep(1);
+  });
+  const init = async () => {
+    if (isFile) return;
+    ready = false; $("#next-button").disabled = true;
+    $("#mode-banner").innerHTML = "<strong>正在連線</strong>載入活動設定中…";
+    const controller = new AbortController(), timer = setTimeout(() => controller.abort(), 10000);
+    try {
+      const response = await fetch("/api/config",{credentials:"same-origin",cache:"no-store",signal:controller.signal});
+      if (!response.ok) throw new Error("config");
+      const result = await response.json();
+      if (!["live","demo"].includes(result.mode)) throw new Error("config");
+      config = result; renderConfig(); ready = true; $("#next-button").disabled = false; setStep(1,false);
+      if (config.mode !== "live") $("#mode-banner").innerHTML = "<strong>互動示範</strong>不會提交或儲存資料，請勿輸入真實個人資料。";
+    } catch {
+      $("#mode-banner").hidden = false; $("#mode-banner").classList.add("error");
+      $("#mode-banner").textContent = "暫時未能連接登記服務。請重新整理，或稍後再試。";
+      showError("網站未能載入活動設定，因此已暫停提交。請勿把此狀態視為成功登記。");
+    } finally { clearTimeout(timer); }
+  };
+  init();
+})();
+</script>
+</body>
+</html>
